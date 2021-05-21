@@ -1,0 +1,70 @@
+<div class="container">
+  <h1 class="text-center mt-5">Update Users</h1>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-4" *ngIf="userInStorage">
+      <form #updateUserForm="ngForm" (ngSubmit)="update()">
+        <div class="mb-3">
+          <label for="name" class="form-label"> <nav>Name</nav></label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="firstName"
+            #firstName="ngModel"
+            [(ngModel)]="userInStorage.firstName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="LastName" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="LastName"
+            name="lastName"
+            #lasttName="ngModel"
+            [(ngModel)]="userInStorage.lastName"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            #email="ngModel"
+            [(ngModel)]="userInStorage.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            name="age"
+            #age="ngModel"
+            [(ngModel)]="userInStorage.age"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="role" class="form-label">
+            <nav>Search for roles</nav></label
+          >
+          <select
+            name="role"
+            id="role"
+            #role="ngModel"
+            [(ngModel)]="userInStorage.role"
+          >
+            <option>student</option>
+            <option>professor</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update User</button>
+      </form>
+    </div>
+  </div>
+</div>
