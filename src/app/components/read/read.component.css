@@ -8,3 +8,16 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.img{
+    height: 6rem;
+    
+}
+
+.botoncontainer{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
