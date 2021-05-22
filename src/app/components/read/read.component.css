@@ -1,3 +1,10 @@
 .fontSize {
-    font-size: 13px !important;
+  font-size: 13px;
+}
+.aside {
+    margin-left: 1rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

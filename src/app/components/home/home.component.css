@@ -1,0 +1,20 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.center2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
+}
+.imgCenter{
+    
+    height: 30rem;
+}
+
+.icon{
+    color: red;
+}
