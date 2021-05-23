@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
-import { UserService } from '../../service/user.service';
+import { Center } from 'src/app/models/center';
+import { CenterService } from 'src/app/service/center.service';
+
 
 @Component({
   selector: 'app-create',
@@ -8,16 +9,16 @@ import { UserService } from '../../service/user.service';
   styleUrls: ['./create.component.css'],
 })
 export class CreateComponent implements OnInit {
-  public user: User;
+  public center: Center;
 
-  constructor(private userService: UserService) {
-    this.user = new User('', '', '', '', 0, '');
+  constructor(private centerService: CenterService) {
+    this.center = new Center('', '', '','', 0, 0, 0);
   }
 
   ngOnInit(): void {}
 
   register() {
-    this.userService.userRegister(this.user).subscribe(
+    this.centerService.centerRegister(this.center).subscribe(
       (res: any) => {
         if (res.statusCode !== 200) {
           alert('No se pudo registrar el usuario');

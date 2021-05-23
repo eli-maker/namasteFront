@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
-  apiURL = 'http://localhost:3000/api/users/';
+export class CenterService {
+  apiURL = 'http://localhost:3000/api/centers/';
 
   constructor(private _http: HttpClient) {}
 
-  userRegister(userParams): Observable<any> {
-    let params = JSON.stringify(userParams);
+  centerRegister(centerParams): Observable<any> {
+    let params = JSON.stringify(centerParams);
     let options = new HttpHeaders().set('Content-type', 'application/json');
 
     return this._http
@@ -19,32 +19,29 @@ export class UserService {
       .pipe((res) => res);
   }
 
-  showUsers(role): Observable<any> {
+  showCenters(role): Observable<any> {
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'aplication/json' }),
     };
     return this._http
-      .get(this.apiURL + 'allUsers/' + role, options)
+      .get(this.apiURL + 'allCenters/' + role, options)
       .pipe((res) => res);
   }
 
-  //User Update
-
-  userUpdate(idUser, userUpdated): Observable<any> {
-    let params = JSON.stringify(userUpdated);
+  centersUpdate(idCenter, centerUpdated): Observable<any> {
+    let params = JSON.stringify(centerUpdated);
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
     return this._http
-      .put(this.apiURL + idUser, params, options)
+      .put(this.apiURL + idCenter, params, options)
       .pipe((res) => res);
   }
 
-  //Delete User
-  deleteUser(idUser): Observable<any> {
+  deleteCenter(idCenter): Observable<any> {
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
-    return this._http.delete(this.apiURL + idUser, options).pipe((res) => res);
+    return this._http.delete(this.apiURL + idCenter, options).pipe((res) => res);
   }
 }
