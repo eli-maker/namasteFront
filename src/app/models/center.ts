@@ -1,10 +1,10 @@
 export class Center {
     constructor(
       public _id: string,
-      public Name: string,
-      public Adress: String,
+      public name: string,
+      public adress: String,
       public email: String,
-      public Phone: Number,
+      public phone: Number,
       public longitude: Number, 
       public latitude: Number,
     ) {}

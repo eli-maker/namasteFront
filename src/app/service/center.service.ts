@@ -19,12 +19,12 @@ export class CenterService {
       .pipe((res) => res);
   }
 
-  showCenters(role): Observable<any> {
+  showCenters(): Observable<any> {
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'aplication/json' }),
     };
     return this._http
-      .get(this.apiURL + 'allCenters/' + role, options)
+      .get(this.apiURL + 'allCenters/', options)
       .pipe((res) => res);
   }
 

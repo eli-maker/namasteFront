@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CenterService } from 'src/app/service/center.service';
 import { User } from '../../models/user';
-import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-read',
@@ -9,21 +9,19 @@ import { UserService } from '../../service/user.service';
 })
 export class ReadComponent implements OnInit {
   public user: User;
-  public usersFound: any = [];
+  public centersFound: any = [];
   public searchRole: string;
-  constructor(private userService: UserService) {
+  constructor(private centerService: CenterService) {
     this.user = new User('', '', '', '', 0, '');
   }
 
-  ngOnInit(): void {}
-
-  read() {
-    this.userService.showUsers(this.searchRole).subscribe(
+  ngOnInit(): void {
+    this.centerService.showCenters().subscribe(
       (res: any) => {
         if (res.statusCode !== 200) {
-          alert('Users no found');
+          alert('Centers not found');
         } else {
-          this.usersFound = res.allUsers;
+          this.centersFound = res.allCenters;
         }
       },
       (error) => {
@@ -35,18 +33,18 @@ export class ReadComponent implements OnInit {
     );
   }
 
-  saveUser(user) {
-    const userString = JSON.stringify(user);
-    localStorage.setItem('user', userString);
+  saveCenter(center) {
+    const centerString = JSON.stringify(center);
+    localStorage.setItem('center', centerString);
   }
 
-  delete(userId) {
-    this.userService.deleteUser(userId).subscribe(
+  delete(centerId) {
+    this.centerService.deleteCenter(centerId).subscribe(
       (res: any) => {
         if (res.statusCode !== 200) {
-          alert('Cannot delete a user');
+          alert('Cannot delete a center');
         } else {
-          alert('User deleted');
+          alert('Center deleted');
           window.location.reload();
         }
       },

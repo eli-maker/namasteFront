@@ -23,7 +23,7 @@ export class UpdateComponent implements OnInit {
   }
 
   fillForm(){
-    this.centerInStorage = JSON.parse(localStorage.getItem('user'))
+    this.centerInStorage = JSON.parse(localStorage.getItem('center'));
   }    
 
   update(){

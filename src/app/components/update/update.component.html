@@ -9,10 +9,10 @@
 <!-- Form -->
 <div class="row col-11">
 <div class="container">
-  <h1 class="text-center mt-5">Update Users</h1>
+  <h1 class="text-center mt-5">Update Centers</h1>
   <div class="row d-flex justify-content-center mt-5">
     <div class="col-4" *ngIf="centerInStorage">
-      <form #updateUserForm="ngForm" (ngSubmit)="update()">
+      <form class="updateForm" #updateUserForm="ngForm" (ngSubmit)="update()">
         <div class="mb-3">
           <label for="name" class="form-label"> <nav>Name</nav></label>
           <input
@@ -21,7 +21,7 @@
             id="name"
             name="Name"
             #Name="ngModel"
-            [(ngModel)]="center.Name"
+            [(ngModel)]="centerInStorage.name"
           />
         </div>
         <div class="mb-3">
@@ -32,7 +32,7 @@
             id="Adress"
             name="Adress"
             #Adress="ngModel"
-            [(ngModel)]="center.Adress"
+            [(ngModel)]="centerInStorage.adress"
           />
         </div>
 
@@ -44,7 +44,7 @@
             id="email"
             name="email"
             #email="ngModel"
-            [(ngModel)]="center.email"
+            [(ngModel)]="centerInStorage.email"
           />
         </div>
         <div class="mb-3">
@@ -55,7 +55,19 @@
             id="Phone"
             name="Phone"
             #Phone="ngModel"
-            [(ngModel)]="center.Phone"
+            [(ngModel)]="centerInStorage.phone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="latitude" class="form-label">latitude</label>
+          <input
+            type="number"
+            class="form-control"
+            id="latitude"
+            name="latitude"
+            #latitude="ngModel"
+            [(ngModel)]="centerInStorage.latitude"
           />
         </div>
 
@@ -68,22 +80,11 @@
             id="longitude"
             name="longitude"
             #longitude="ngModel"
-            [(ngModel)]="center.longitude"
+            [(ngModel)]="centerInStorage.longitude"
           />
         </div>
-
-        <div class="mb-3">
-          <label for="latitude" class="form-label">latitude</label>
-          <input
-            type="number"
-            class="form-control"
-            id="latitude"
-            name="latitude"
-            #latitude="ngModel"
-            [(ngModel)]="center.latitude"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Update User</button>
+        
+        <button type="submit" class="btn btn-primary">Update Center</button>
       </form>
     </div>
   </div>
