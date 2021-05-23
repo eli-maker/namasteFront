@@ -1,82 +1,92 @@
-<div class="container">
-  <h1 class="text-center mt-5">Register</h1>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-4">
-      <form #userRegisterForm="ngForm" (ngSubmit)="register()">
-        <div class="mb-3">
-          <label for="name" class="form-label"> <nav>Name</nav></label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="Name"
-            #Name="ngModel"
-            [(ngModel)]="center.Name"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="Adress" class="form-label">Adress</label>
-          <input
-            type="text"
-            class="form-control"
-            id="Adress"
-            name="Adress"
-            #Adress="ngModel"
-            [(ngModel)]="center.Adress"
-          />
-        </div>
+<div class="row">
+  <aside class="col-1 aside">
+    <a class="nav-link" [routerLink]="['/read']"
+      ><img src="../../../assets/images/leftarrow.png" class="img"
+    /></a>
+  </aside>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            #email="ngModel"
-            [(ngModel)]="center.email"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="Phone" class="form-label">Phone</label>
-          <input
-            type="number"
-            class="form-control"
-            id="Phone"
-            name="Phone"
-            #Phone="ngModel"
-            [(ngModel)]="center.Phone"
-          />
-        </div>
+  <!-- form -->
+  <div class="col-11">
+    <div class="container">
+      <h1 class="text-center">Register</h1>
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-4">
+          <form #userRegisterForm="ngForm" (ngSubmit)="register()">
+            <div class="mb-3">
+              <label for="name" class="form-label"> <nav>Name</nav></label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="Name"
+                #Name="ngModel"
+                [(ngModel)]="center.Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Adress" class="form-label">Adress</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Adress"
+                name="Adress"
+                #Adress="ngModel"
+                [(ngModel)]="center.Adress"
+              />
+            </div>
 
-        <div class="mb-3">
-          <label for="longitude" class="form-label">longitude
-          </label>
-          <input
-            type="number"
-            class="form-control"
-            id="longitude"
-            name="longitude"
-            #longitude="ngModel"
-            [(ngModel)]="center.longitude"
-          />
-        </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                #email="ngModel"
+                [(ngModel)]="center.email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Phone" class="form-label">Phone</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Phone"
+                name="Phone"
+                #Phone="ngModel"
+                [(ngModel)]="center.Phone"
+              />
+            </div>
 
-        <div class="mb-3">
-          <label for="latitude" class="form-label">latitude</label>
-          <input
-            type="number"
-            class="form-control"
-            id="latitude"
-            name="latitude"
-            #latitude="ngModel"
-            [(ngModel)]="center.latitude"
-          />
-        </div>
-        
+            <div class="mb-3">
+              <label for="longitude" class="form-label">longitude </label>
+              <input
+                type="number"
+                class="form-control"
+                id="longitude"
+                name="longitude"
+                #longitude="ngModel"
+                [(ngModel)]="center.longitude"
+              />
+            </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+            <div class="mb-3">
+              <label for="latitude" class="form-label">latitude</label>
+              <input
+                type="number"
+                class="form-control"
+                id="latitude"
+                name="latitude"
+                #latitude="ngModel"
+                [(ngModel)]="center.latitude"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- form end -->
 </div>

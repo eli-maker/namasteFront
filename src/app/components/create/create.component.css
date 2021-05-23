@@ -1,0 +1,10 @@
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.img {
+  height: 6rem;
+  margin-left: 3rem;
+  margin-bottom: 10rem;
+}

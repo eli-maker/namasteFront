@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../service/user.service';
 import { CanActivate, Router } from '@angular/router';
+import { CenterService } from 'src/app/service/center.service';
+import { Center } from 'src/app/models/center';
 
 @Component({
   selector: 'app-update',
@@ -9,11 +11,11 @@ import { CanActivate, Router } from '@angular/router';
   styleUrls: ['./update.component.css'],
 })
 export class UpdateComponent implements OnInit {
-  public user: User;
-  public userInStorage: any;
+  public center:Center;
+  public centerInStorage: any;
 
-  constructor(private userService: UserService, private router: Router) {
-    this.user = new User('', '', '', '', 0, '');
+  constructor(private centerService: CenterService, private router: Router) {
+    this.center = new Center('', '', '', '', 0, 0, 0);
   }
 
   ngOnInit(): void {
@@ -21,11 +23,11 @@ export class UpdateComponent implements OnInit {
   }
 
   fillForm(){
-    this.userInStorage = JSON.parse(localStorage.getItem('user'))
+    this.centerInStorage = JSON.parse(localStorage.getItem('user'))
   }    
 
   update(){
-    this.userService.userUpdate(this.userInStorage._id, this.userInStorage).subscribe(
+    this.centerService.centerUpdate(this.centerInStorage._id, this.centerInStorage).subscribe(
       (res:any)=> {
         if(res.statusCode !== 200){
         alert('Cannot update user') 

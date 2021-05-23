@@ -28,7 +28,7 @@ export class CenterService {
       .pipe((res) => res);
   }
 
-  centersUpdate(idCenter, centerUpdated): Observable<any> {
+  centerUpdate(idCenter, centerUpdated): Observable<any> {
     let params = JSON.stringify(centerUpdated);
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
