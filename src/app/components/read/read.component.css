@@ -1,5 +1,6 @@
 .fontSize {
   font-size: 13px;
+ 
 }
 .aside {
   margin-left: 1rem;
@@ -7,6 +8,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+ 
 }
 
 .img{

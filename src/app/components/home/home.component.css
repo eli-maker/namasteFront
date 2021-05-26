@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
+    margin-left: 40px;
+    font-family: 'Roboto', sans-serif;
+ 
 }
 .center2{
     display: flex;
