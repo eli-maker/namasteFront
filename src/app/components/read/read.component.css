@@ -13,11 +13,10 @@
  
 }
 
-.img{
-    height: 6rem;
-    
+.add{
+ font-size: 50px;
+ color: cadetblue;
 }
-
 .botoncontainer{
     height: 70vh;
     display: flex;

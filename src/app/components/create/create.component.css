@@ -3,10 +3,11 @@
   justify-content: center;
   align-items: flex-end;
 }
-.img {
-  height: 6rem;
+.arrowicon {
+  font-size: 50px;
+  color: cadetblue;
   margin-left: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
 }
 
 .createForm {
