@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  apiURL = 'http://localhost:3000/api/users/';
+  apiURL = 'https://namasteconnections.herokuapp.com/api/users/';
 
   constructor(private _http: HttpClient) {}
 
