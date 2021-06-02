@@ -12,6 +12,8 @@ import { ReadComponent } from './components/read/read.component';
 import { UpdateComponent } from './components/update/update.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MapComponent } from './components/map/map.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ReadComponent,
     UpdateComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule, routing,

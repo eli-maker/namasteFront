@@ -1,6 +1,3 @@
-
-
-
 <div class="row">
   <aside class="col-1 aside">
     <a class="nav-link" [routerLink]="['/read']"
@@ -8,89 +5,92 @@
     </a>
   </aside>
 
-<!-- Form -->
-<div class="row col-11">
-<div class="container">
-  <h1 class="text-center mt-5">Update Centers</h1>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-4" *ngIf="centerInStorage">
-      <form class="updateForm" #updateUserForm="ngForm" (ngSubmit)="update()">
-        <div class="mb-3">
-          <label for="name" class="form-label"> <nav>Name</nav></label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="Name"
-            #Name="ngModel"
-            [(ngModel)]="centerInStorage.name"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="Adress" class="form-label">Adress</label>
-          <input
-            type="text"
-            class="form-control"
-            id="Adress"
-            name="Adress"
-            #Adress="ngModel"
-            [(ngModel)]="centerInStorage.adress"
-          />
-        </div>
+  <!-- Form -->
+  <div class="row col-11">
+    <div class="container">
+      <h1 class="text-center mt-5">Actualizar Centro</h1>
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-4" *ngIf="centerInStorage">
+          <form
+            class="updateForm"
+            #updateUserForm="ngForm"
+            (ngSubmit)="update()"
+          >
+            <div class="mb-3">
+              <label for="name" class="form-label"> <nav>Nombre</nav></label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="Name"
+                #Name="ngModel"
+                [(ngModel)]="centerInStorage.name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Adress" class="form-label">Dirección</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Adress"
+                name="Adress"
+                #Adress="ngModel"
+                [(ngModel)]="centerInStorage.adress"
+              />
+            </div>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            #email="ngModel"
-            [(ngModel)]="centerInStorage.email"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="Phone" class="form-label">Phone</label>
-          <input
-            type="number"
-            class="form-control"
-            id="Phone"
-            name="Phone"
-            #Phone="ngModel"
-            [(ngModel)]="centerInStorage.phone"
-          />
-        </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                #email="ngModel"
+                [(ngModel)]="centerInStorage.email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Phone" class="form-label">Teléfono</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Phone"
+                name="Phone"
+                #Phone="ngModel"
+                [(ngModel)]="centerInStorage.phone"
+              />
+            </div>
 
-        <div class="mb-3">
-          <label for="latitude" class="form-label">latitude</label>
-          <input
-            type="number"
-            class="form-control"
-            id="latitude"
-            name="latitude"
-            #latitude="ngModel"
-            [(ngModel)]="centerInStorage.latitude"
-          />
-        </div>
+            <div class="mb-3">
+              <label for="latitude" class="form-label">latitud</label>
+              <input
+                type="number"
+                class="form-control"
+                id="latitude"
+                name="latitude"
+                #latitude="ngModel"
+                [(ngModel)]="centerInStorage.latitude"
+              />
+            </div>
 
-        <div class="mb-3">
-          <label for="longitude" class="form-label">longitude
-          </label>
-          <input
-            type="number"
-            class="form-control"
-            id="longitude"
-            name="longitude"
-            #longitude="ngModel"
-            [(ngModel)]="centerInStorage.longitude"
-          />
+            <div class="mb-3">
+              <label for="longitude" class="form-label">longitud </label>
+              <input
+                type="number"
+                class="form-control"
+                id="longitude"
+                name="longitude"
+                #longitude="ngModel"
+                [(ngModel)]="centerInStorage.longitude"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Actualizar Centro</button>
+          </form>
         </div>
-        
-        <button type="submit" class="btn btn-primary">Update Center</button>
-      </form>
+      </div>
     </div>
   </div>
-</div>
-</div>
-<!-- Form end -->
+  <!-- Form end -->
 </div>
