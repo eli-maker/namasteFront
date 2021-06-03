@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing } from './app.routing'
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MarkerService } from './service/marker.service';
 
 
 import { AppComponent } from './app.component';
@@ -30,7 +31,9 @@ import { MapComponent } from './components/map/map.component';
     BrowserModule, routing,
     FormsModule, HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MarkerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
