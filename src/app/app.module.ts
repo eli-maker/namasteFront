@@ -4,6 +4,7 @@ import { routing } from './app.routing'
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkerService } from './service/marker.service';
+import { PopupService } from './popup.service';
 
 
 import { AppComponent } from './app.component';
@@ -32,7 +33,8 @@ import { MapComponent } from './components/map/map.component';
     FormsModule, HttpClientModule
   ],
   providers: [
-    MarkerService
+    MarkerService,
+    PopupService
   ],
   bootstrap: [AppComponent]
 })
