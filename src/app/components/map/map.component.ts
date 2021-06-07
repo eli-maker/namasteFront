@@ -27,8 +27,8 @@ export class MapComponent implements AfterViewInit {
   private map;
   private initMap(): void {
     this.map = L.map('map', {
-      center: [39.8282, -98.5795],
-      zoom: 3,
+      center: [4.6478991, -74.1081244],
+      zoom: 10,
     });
 
     const tiles = L.tileLayer(
@@ -48,6 +48,6 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeCapitalMarkers(this.map);
+    this.markerService.makeMarkers(this.map);
   }
 }

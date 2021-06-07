@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Center } from 'src/app/models/center';
 import { CenterService } from 'src/app/service/center.service';
 
@@ -11,7 +12,10 @@ import { CenterService } from 'src/app/service/center.service';
 export class CreateComponent implements OnInit {
   public center: Center;
 
-  constructor(private centerService: CenterService) {
+  constructor(
+    private centerService: CenterService,
+    private router: Router
+    ) {
     this.center = new Center('', '', '','', 0, 0, 0);
   }
 
@@ -24,6 +28,7 @@ export class CreateComponent implements OnInit {
           alert('No se pudo registrar el usuario');
         } else {
           alert('Registro exitoso');
+          this.router.navigate(['/read']);
         }
       },
       (error) => {
