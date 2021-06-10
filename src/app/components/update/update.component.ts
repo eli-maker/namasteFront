@@ -30,9 +30,9 @@ export class UpdateComponent implements OnInit {
     this.centerService.centerUpdate(this.centerInStorage._id, this.centerInStorage).subscribe(
       (res:any)=> {
         if(res.statusCode !== 200){
-        alert('Cannot update user') 
+        alert('Cannot update center') 
         }else{
-          alert('User updated')
+          alert('Center updated')
           localStorage.clear()
           this.router.navigate(['/read']);
         }
