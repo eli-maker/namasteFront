@@ -22,9 +22,9 @@ export class MarkerService {
     this.centerService.deleteCenter(centerId).subscribe(
       (res: any) => {
         if (res.statusCode !== 200) {
-          alert('Cannot delete a center');
+          alert('Centro no puede ser eliminado');
         } else {
-          alert('Center deleted');
+          alert('Centro eliminado');
           window.location.reload();
         }
       },
@@ -59,11 +59,11 @@ export class MarkerService {
             const centerPopUp = L.popup();
             const container = L.DomUtil.create('div'),
               name = this.createTextElement(
-                `<div>Name: ${center.name}</div>`,
+                `<div>Nombre: ${center.name}</div>`,
                 container
               ),
               adress = this.createTextElement(
-                `<div>Adress: ${center.adress}</div>`,
+                `<div>Dirección: ${center.adress}</div>`,
                 container
               ),
               email = this.createTextElement(
@@ -71,11 +71,11 @@ export class MarkerService {
                 container
               ),
               phone = this.createTextElement(
-                `<div>Phone: ${center.phone}</div>`,
+                `<div>Teléfono: ${center.phone}</div>`,
                 container
               ),
-              updateBtn = this.createButton('Update', container, true),
-              deleteBtn = this.createButton('Delete', container, false);
+              updateBtn = this.createButton('Actualizar', container, true),
+              deleteBtn = this.createButton('Eliminar', container, false);
 
             const lon = center.longitude;
             const lat = center.latitude;
